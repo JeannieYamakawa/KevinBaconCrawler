@@ -1,3 +1,4 @@
+require_relative './queue'
 require 'rest-client'
 require 'nokogiri'
 
@@ -19,7 +20,14 @@ end
         doc = visit(@root)
         # puts inspect line below lets us inspect the object returned with the CLI by typing irb. irb is ruby's REPL and will run whatever you write in the CLI.
         # puts doc.inspect
-        puts doc.css("#filmography > div:nth-child(2)")
+        # line below grabs the a tag within the b tag within the filmography table on the website
+        movies_list = doc.css("#filmography > div:nth-child(2) b > a")
+        #line below returns list of movie names as a paragraph.
+        # puts movies_list.inner_html
+        movies_list.each do |movie|
+            puts movie.inner_html
+            puts movie.attribute('href')
+        end
 
     end
 

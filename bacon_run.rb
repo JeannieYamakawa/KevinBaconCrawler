@@ -5,4 +5,4 @@ booyah = BaconCrawler.new('John Goodman')
 # line below is to test wiring
 # booyah.test
 
-booyah.findMovies
+booyah.bacon_first_search

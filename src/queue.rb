@@ -10,7 +10,7 @@ class Queue
     end
     #dequeue will pull out the thing on the front of the array and return it to us and in doing so shortens the array
     def dequeue
-        @q.unshift
+        @q.shift
     end
     #method below will just return the current value of the whole q list
     def all

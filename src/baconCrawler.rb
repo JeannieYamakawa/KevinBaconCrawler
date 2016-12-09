@@ -10,13 +10,13 @@ def initialize(person)
     # hard coded to be kevin bacon's imdb page
     @root = "http://www.imdb.com/name/nm0000102/?ref_=fn_al_nm_1"
     @queue = Queue.new
+    #the line below is running the findMovies function to populate a queue list before we do the bacon_first_search
     findMovies
 end
 # def test
 #     # do this before typing any more methods below! it's just making sure we're wired up correctly. also test wiring by misspelling one of the require dependencies, example 'nokogirsi'
 #     puts 'booyah!!!'
 # end
-    #the line below is running the findMovies function to populate a queue list before we do the bacon_first_search
 
     def bacon_first_search
         nextNode = @queue.dequeue
